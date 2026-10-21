@@ -83,7 +83,7 @@ aeroTrajectory = interpolateAeroTrajectory(aero, mach, altitude, rad2deg(alpha))
 
 % Preliminary reference settings from the current design discussion.
 % Confirm CREF and the moment reference against the original CBAero deck.
-L = 2.0164;                   % m, design-frame vehicle length
+L = 2.0164;                   % m, design-frame vehicle length, (INPUT FOR REQUIRED L, cref)
 cref = 0.18188;               % m, inferred value, not yet deck-confirmed
 xMomentReference_m = 0;       % ASSUMES Cm_nose is about the sharp nose
 xcgCandidates = [0.50, 0.54, 0.58, 0.62, 0.66, 0.70]; % design-frame xcg/L
