@@ -3,7 +3,7 @@ clc;
 
 %% Read trajectory
 inputFile = fullfile( ...
-"C:\Users\abhay\OneDrive - purdue.edu\(A) UCAH Hypersonics Comp\Designs\Lifting Body V2\bulge_results_collocation.csv");
+"C:\Users\abhay\OneDrive - purdue.edu\(A) UCAH Hypersonics Comp\Designs\Lifting Body V2\bulge_results_collocation.csv"); %INPUT YOUR FILE PATH FOR OPTIMIZED TRAJECTORY
 
 T = readtable(inputFile);
 requiredColumns = {'Time_s', 'Mach', 'Altitude_m', 'Speed_mps', ...
@@ -75,7 +75,7 @@ dynamicPressure = dynamicPressure(:);
 altitude = altitude(:);
 
 %% Aerodynamic coefficients only at the trajectory flight conditions
-aeroFile = fullfile(fileparts(inputFile), 'Aero coeffs.csv');
+aeroFile = fullfile(fileparts(inputFile), 'Aero coeffs.csv'); %INPUT YOUR FILE PATH FOR THE CBAERO COEFFICIENTS
 aero = readtable(aeroFile);
 % Each query is one (Mach, altitude in m, alpha in degrees) triplet.
 % This does not generate a new sweep over every database altitude.
